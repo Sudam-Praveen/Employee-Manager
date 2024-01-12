@@ -1,4 +1,6 @@
 
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÇãŸöùÿÿÿÿ8øÍˆêÏ1
-h
-java:S1128"FRemove this unused import 'org.springframework.stereotype.Repository'.(¦ıÍıüÿÿÿÿ8ûÍˆêÏ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÇãŸöùÿÿÿÿ8Û˜äêÏ1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8è™äêÏ1
+C
+java:S1452'"&Remove usage of generic wildcard type.(°Ùæñ8û™äêÏ1
