@@ -8,7 +8,7 @@ import tech.arrays.employeeManagerApplication.model.Employee;
 import tech.arrays.employeeManagerApplication.service.EmployeeService;
 
 import java.util.List;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {

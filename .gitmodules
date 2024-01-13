@@ -1,0 +1,3 @@
+[submodule "EmployeesUI/UI"]
+	path = EmployeesUI/UI
+	url = https://github.com/Sudam-Praveen/Employee-Manager.git
