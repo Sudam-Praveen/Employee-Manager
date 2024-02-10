@@ -19,24 +19,29 @@ public class EmployeeServiceImpl implements EmployeeService {
     public EmployeeServiceImpl(EmployeeRepo employeeRepo) {
         this.employeeRepo = employeeRepo;
     }
-    public Employee addEmployee(Employee employee){
+
+    public Employee addEmployee(Employee employee) {
         employee.setEmployeeCode(UUID.randomUUID().toString());
         return employeeRepo.save(employee);
     }
-    public List<Employee> findAllEmployees(){
+
+    public List<Employee> findAllEmployees() {
         return employeeRepo.findAll();
     }
-    public Employee updateEmployee(Employee employee){
+
+    public Employee updateEmployee(Employee employee) {
         return employeeRepo.save(employee);
     }
-    public void deleteEmployee(Long id){
+
+    public void deleteEmployee(Long id) {
         Optional<Employee> employee = employeeRepo.findById(id);
-        if(employee.isPresent()){
+        if (employee.isPresent()) {
             employeeRepo.deleteById(id);
         }
 
     }
-    public Employee findEmployeeById(Long id){
+
+    public Employee findEmployeeById(Long id) {
 
         return (employeeRepo.findEmployeeById(id)
                 .orElseThrow(() -> new UserNotFoundException("User by id " + id + " was not found")));

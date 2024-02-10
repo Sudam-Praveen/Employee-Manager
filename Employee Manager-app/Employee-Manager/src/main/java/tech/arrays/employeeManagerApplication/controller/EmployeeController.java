@@ -16,13 +16,15 @@ public class EmployeeController {
     EmployeeService employeeService;
 
     @GetMapping("/all")
-    public ResponseEntity<List<Employee>> getAllEmployees() {
+    public ResponseEntity<List<Employee>> getAllEmployees() throws InterruptedException {
         List<Employee> employees = employeeService.findAllEmployees();
+        Thread.sleep(2000);
         return new ResponseEntity<>(employees, HttpStatus.OK);
     }
     @GetMapping("/find/{id}")
-    public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") Long id) {
+    public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") Long id)  {
         Employee employee = employeeService.findEmployeeById(id);
+
         return new ResponseEntity<>(employee, HttpStatus.OK);
     }
     @PostMapping("/add")
@@ -36,8 +38,8 @@ public class EmployeeController {
         return new ResponseEntity<>(updateEmployee, HttpStatus.OK);
     }
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteEmployee(@PathVariable("id") Long id){
+    public ResponseEntity<String> deleteEmployee(@PathVariable("id") Long id){
      employeeService.deleteEmployee(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>("deleted",HttpStatus.OK);
     }
 }

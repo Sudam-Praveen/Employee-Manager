@@ -1,0 +1,6 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÇãŸöùÿÿÿÿ8ÒÊõ¦Ù1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8İÊõ¦Ù1
+o
+java:S1128"RRemove this unused import 'tech.arrays.employeeManagerApplication.model.Employee'.(¢…Õ²8†–¦§Ù1
